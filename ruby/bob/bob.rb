@@ -21,7 +21,7 @@ class String
   end
 
   def asking?
-    self[-1] == "?"
+    self.end_with?("?")
   end
 
   def silence?
