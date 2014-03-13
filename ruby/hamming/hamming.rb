@@ -1,7 +1,13 @@
 class Hamming
 
   def self.compute(a, b)
-    a == b ? 0 : 1
+    i = -1
+    hamming = 0
+    a.each_char do |chr|
+      i++
+      hamming += 1 unless b[i] == chr
+    end
+    hamming
   end
 
   private
