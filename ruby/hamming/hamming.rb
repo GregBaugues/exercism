@@ -13,7 +13,7 @@ class Hamming
   private
 
   def self.shortest_length(a,b)
-    a.size < b.size ? a.size : b.size
+    [a.size, b.size].min
   end
 
 end
