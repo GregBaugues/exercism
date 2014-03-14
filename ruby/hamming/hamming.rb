@@ -1,12 +1,10 @@
 class Hamming
 
   def self.compute(a, b)
-
     hamming = 0
-    (0..shortest_length(a,b) - 1).each do |i|
+    shortest_length(a,b).times do |i|
       hamming += 1 unless a[i] == b[i]
     end
-
     hamming
   end
 
